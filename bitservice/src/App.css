@@ -6,3 +6,17 @@
 html {
     background-color: #E0E0E0;
 }
+
+.main-content {
+    flex: 1 0 auto;
+    padding: var(--space) var(--space) 0;
+    width: 100%;
+}
+
+
+.page {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

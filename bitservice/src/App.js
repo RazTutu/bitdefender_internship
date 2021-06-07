@@ -7,11 +7,14 @@ import GetIPpage from './Pages/GetIP';
 import UpdateIPpage from './Pages/UpdateIP';
 import DeleteIPpage from './Pages/DeleteIP';
 import Navigation from './Components/Navigation/Navigation';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
     <BrowserRouter>
       <React.Fragment>
+      <div className="page">  
+      <main className="main-content">
       <Navigation />
 
       <Switch>
@@ -22,6 +25,11 @@ function App() {
         <Route path="/deleteIP" component={DeleteIPpage}/>
               
       </Switch>
+      </main>
+      <div className="align-footer">
+        <Footer />
+      </div>
+      </div>
       </React.Fragment>
     </BrowserRouter>
   );
