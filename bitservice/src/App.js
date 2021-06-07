@@ -6,11 +6,14 @@ import AddIPpage from './Pages/AddIP';
 import GetIPpage from './Pages/GetIP';
 import UpdateIPpage from './Pages/UpdateIP';
 import DeleteIPpage from './Pages/DeleteIP';
+import Navigation from './Components/Navigation/Navigation';
 
 function App() {
   return (
     <BrowserRouter>
       <React.Fragment>
+      <Navigation />
+
       <Switch>
         <Route path="/" component={HomePage} exact/>
         <Route path="/addIP" component={AddIPpage}/>

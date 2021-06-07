@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 8rem;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav__links ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav__links ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav__links ul li {
+    padding-right: 3rem;
+    margin-top: 3rem;
+}
+
+.nav__text {
+    margin-top: 3rem;
+    padding-left: 7rem;
+}
