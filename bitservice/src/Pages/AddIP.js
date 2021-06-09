@@ -65,7 +65,6 @@ class AddIPpage extends Component {
             }
                 return res.json();
             }).then(responseData => {
-                console.log(responseData);
                 if(selected_option === 'getip'){
                     this.setState({ApiResponse: responseData.data.company, responseReceived: true});
                 } else {
@@ -107,11 +106,11 @@ class AddIPpage extends Component {
                     <h2>Add, Update, Delete or check an IP</h2>
                     <div className="sendRequest__element">
                         <label htmlFor="sendRequest__element-IP">IP:</label>
-                        <input type="text" id="sendRequest__element-IP" ref={this.IP}></input>
+                        <input type="text" id="sendRequest__element-IP" className="input_ip" ref={this.IP}></input>
                     </div>
 
                     <div className="sendRequest__options">
-                            <select id="request_options" name="Options" ref={this.selectedOption}>
+                            <select className="request_options" name="Options" ref={this.selectedOption}>
                                 <option value="getip">Get IP provider</option>
                                 <option value="postip">Post IP</option>
                                 <option value="deleteip">Delete IP</option>
@@ -119,7 +118,7 @@ class AddIPpage extends Component {
                             </select>
                     </div>
                     <div className="sendRequest__button">
-                        <button type="submit">Submit</button>
+                        <button type="submit" className="submit_btn">Submit</button>
                     </div>
                 </form>
 
