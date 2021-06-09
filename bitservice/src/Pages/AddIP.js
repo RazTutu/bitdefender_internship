@@ -3,6 +3,11 @@ import '../CSS/Requests.css';
 
 class AddIPpage extends Component {
 
+    state = {
+        ApiResponse: '',
+        responseReceived: false
+    }
+
     constructor(props){
         super(props);
         this.IP = React.createRef();
@@ -13,8 +18,6 @@ class AddIPpage extends Component {
         pageState.preventDefault();
         const input_ip = this.IP.current.value;
         const selected_option = this.selectedOption.current.value;
-
-        console.log("selected option is", selected_option);
 
         const requestBody = {
             ip: `${input_ip}`
@@ -34,7 +37,8 @@ class AddIPpage extends Component {
             }
             return res.json();
         }).then(responseData => {
-           console.log(responseData);
+           this.setState({ApiResponse: responseData.data.message, responseReceived: true});
+
         }).catch(err => {
             console.log(err);
         });
@@ -62,6 +66,11 @@ class AddIPpage extends Component {
                 return res.json();
             }).then(responseData => {
                 console.log(responseData);
+                if(selected_option === 'getip'){
+                    this.setState({ApiResponse: responseData.data.company, responseReceived: true});
+                } else {
+                this.setState({ApiResponse: responseData.data.message, responseReceived: true});
+                }
             }).catch(err => {
                 console.log(err);
             });
@@ -82,7 +91,7 @@ class AddIPpage extends Component {
                 }
                     return res.json();
                 }).then(responseData => {
-                    console.log(responseData);
+                    this.setState({ApiResponse: responseData.data.message, responseReceived: true});
                 }).catch(err => {
                     console.log(err);
                 });
@@ -113,7 +122,18 @@ class AddIPpage extends Component {
                         <button type="submit">Submit</button>
                     </div>
                 </form>
+
+                <div className="apiResponse">
+                    {!this.state.responseReceived
+                        ?
+                        <h2>Response not received yet</h2>
+                        :
+                        <h2>{this.state.ApiResponse}</h2>
+                    }
                 </div>
+                </div>
+
+
             </React.Fragment>
         );
     }
