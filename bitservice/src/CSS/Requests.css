@@ -55,4 +55,20 @@
     margin-top: 0.8rem;
 }
   
+.show_providers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    text-align: center;
+}
 
+.remove_ul_bullets {
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .show_providers {
+        flex-direction: column;
+    }
+}

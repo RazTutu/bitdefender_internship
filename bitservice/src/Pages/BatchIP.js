@@ -81,12 +81,12 @@ class BatchIPpage extends Component {
 
         });
 
-        this.setState({ip_array: []});
-        this.setState({arrays_loaded: true});
+        this.setState({ip_array: [], arrays_loaded: true});
+        
     }
 
    showList = props => {
-        return <ul>
+        return <ul className="remove_ul_bullets">
             {
             this.state.ip_array.map((element) => (
                 <li key={element}>{element}</li>
@@ -96,7 +96,7 @@ class BatchIPpage extends Component {
    }
 
    showGoogleList = props => {
-    return <ul>
+    return <ul className="remove_ul_bullets">
         {
             this.state.google_ip_array.map((element) => (
                 <li key={element}>{element}</li>
@@ -106,7 +106,7 @@ class BatchIPpage extends Component {
    }
 
    showAzureList = props => {
-    return <ul>
+    return <ul className="remove_ul_bullets">
         {
             this.state.azure_ip_array.map((element) => (
                 <li key={element}>{element}</li>
@@ -116,7 +116,7 @@ class BatchIPpage extends Component {
    }
 
    showAmazonList = props => {
-    return <ul>
+    return <ul className="remove_ul_bullets">
         {
             this.state.amazon_ip_array.map((element) => (
                 <li key={element}>{element}</li>
@@ -126,9 +126,11 @@ class BatchIPpage extends Component {
    }
 
    showUnknownList = props => {
-    return <ul>
+    let temporary_ip_array = this.state.unknown_ip_array;
+    
+    return <ul className="remove_ul_bullets">
         {
-            this.state.unknown_ip_array.map((element) => (
+            temporary_ip_array.map((element) => (
                 <li key={element}>{element}</li>
             ))
         }  
@@ -168,16 +170,16 @@ class BatchIPpage extends Component {
                 </form>
 
                 <div className="show_providers">
-                    <h1>Providers</h1>
+                   
                     <div className="show_providers__google">
                         {this.state.arrays_loaded
                         ?
                         <React.Fragment>
-                            <h1>Google IPs</h1>
+                            <h2>Google IPs</h2>
                             <this.showGoogleList />
                         </React.Fragment>
                         :
-                        <h1>Google IPs to be loaded here</h1>
+                        <h2>Google IPs to be loaded below</h2>
                         }
 
 
@@ -187,11 +189,11 @@ class BatchIPpage extends Component {
                            this.state.arrays_loaded
                            ?
                            <React.Fragment>
-                               <h1>Azure IPs</h1>
+                               <h2>Azure IPs</h2>
                                <this.showAzureList />
                            </React.Fragment> 
                            :
-                           <h1>Azure IPs to be loaded here</h1>
+                           <h2>Azure IPs to be loaded below</h2>
                         }
                     </div>
                     <div className="show_providers__amazon">
@@ -199,11 +201,11 @@ class BatchIPpage extends Component {
                             this.state.arrays_loaded
                             ?
                             <React.Fragment>
-                                <h1>Amazon IPs</h1>
+                                <h2>Amazon IPs</h2>
                                 <this.showAmazonList />
                             </React.Fragment>
                             :
-                            <h1>Amazon IPs to be loaded here</h1>
+                            <h2>Amazon IPs to be loaded below</h2>
                         }
                         
                     </div>
@@ -212,11 +214,11 @@ class BatchIPpage extends Component {
                             this.state.arrays_loaded
                             ?
                             <React.Fragment>
-                                <h1>Unknown IPs</h1>
+                                <h2>Unknown IPs</h2>
                                 <this.showUnknownList />
                             </React.Fragment>
                             :
-                            <h1>Unknown IPs to be loaded here</h1>
+                            <h2>Unknown IPs to be loaded below</h2>
                         }
                     </div>
 
