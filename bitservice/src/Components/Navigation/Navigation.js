@@ -18,6 +18,9 @@ const navigation = props => (
             <li>
                 <NavLink to="/ip">IP page</NavLink>
             </li>
+            <li>
+                <NavLink to="/batchip">BatchIP</NavLink>
+            </li>
         </ul>
         </div>
     </div>

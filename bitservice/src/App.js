@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import HomePage from './Pages/Home';
 import IPpage from './Pages/AddIP';
+import BatchIPpage from './Pages/BatchIP';
 import Navigation from './Components/Navigation/Navigation';
 import Footer from './Components/Footer/Footer';
 
@@ -17,7 +18,7 @@ function App() {
       <Switch>
         <Route path="/" component={HomePage} exact/>
         <Route path="/ip" component={IPpage}/>
-              
+        <Route path="/batchip" component={BatchIPpage}/>
       </Switch>
       </main>
       <div className="align-footer">
