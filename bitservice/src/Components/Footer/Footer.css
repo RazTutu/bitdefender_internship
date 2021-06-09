@@ -8,11 +8,16 @@
 
 .footer__logo-image {
     height: 15rem;
-    width: 30rem;
+    width: 100%;
 }
 
 .footer__info {
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
 }
 
 @media only screen and (max-width: 920px) {
@@ -24,8 +29,3 @@
 
 }
 
-@media only screen and (max-width: 449px) {
-    .footer__logo-image {
-        width: 20rem;
-    }
-}

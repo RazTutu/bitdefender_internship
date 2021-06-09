@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import logo_image from '../../Images/bitdefender_brand.jpg';
+import logo_image from '../../Images/bitdefender-dog.jpg';
 
 const footer = props => {
     return(
@@ -11,6 +11,7 @@ const footer = props => {
                 </div>
                 <div className="footer__info">
                     <h1>Bitdefender</h1>
+                    <h2>Copyright reserved.</h2>
                 </div>
             </div>
         </React.Fragment>

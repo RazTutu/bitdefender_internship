@@ -50,13 +50,21 @@
     .nav {
         display: flex;
         flex-direction: column;
+        justify-content: normal;
         align-items: center;
         text-align: center;
+        height: 15rem;
     }
 
     .nav__links ul {
         flex-direction: column;
-        margin-top: 0;
+    }
+    .nav__links ul li {
+        padding-top: 1rem;
+    }
+
+    .nav__links ul li a {
+        font-size: 25px;
     }
 
 }

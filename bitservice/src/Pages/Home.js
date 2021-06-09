@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import '../CSS/Home.css';
 import add_image from '../Images/Plus_symbol.svg';
-import delete_image from '../Images/delete.jpg';
+import delete_image from '../Images/delete_icon.svg';
 import getIP_image from '../Images/info_no_backgr.png';
-import update_image from '../Images/refresh.jpg';
-
-
+import update_image from '../Images/update_ip_api.png';
 
 class HomePage extends Component {
     render(){
