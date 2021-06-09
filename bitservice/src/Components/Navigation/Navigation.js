@@ -16,16 +16,7 @@ const navigation = props => (
                 <NavLink to="/">Home</NavLink>
             </li>
             <li>
-                <NavLink to="/addIP">Add IP</NavLink>
-            </li>
-            <li>
-                <NavLink to="/getIP">Get IP</NavLink>
-            </li>
-            <li>
-                <NavLink to="/updateIP">Update IP</NavLink>
-            </li>
-            <li>
-                <NavLink to="/deleteIP">Delete IP</NavLink>
+                <NavLink to="/ip">IP page</NavLink>
             </li>
         </ul>
         </div>

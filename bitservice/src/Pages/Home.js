@@ -21,7 +21,7 @@ class HomePage extends Component {
 
                         <div className="operations__content-items">
                             <div className="operations__add">
-                                <img src={add_image} alt="Image for adding an IP" class="operations__content-img"/>
+                                <img src={add_image} alt="Adding an IP" class="operations__content-img"/>
                                 <div className="operations__text">
                                     <h2>Add IP</h2>
                                     <p>   
@@ -33,7 +33,7 @@ class HomePage extends Component {
                                 </div>
                             </div>
                             <div className="operations__get">
-                                <img src={getIP_image} alt="Image for getting an IP" class="operations__content-img"/>
+                                <img src={getIP_image} alt="Getting an IP" class="operations__content-img"/>
                                 <div className="operations__text">
                                     <h2>Get IP</h2>
                                     <p>
@@ -44,7 +44,7 @@ class HomePage extends Component {
                                 </div>
                             </div>
                             <div className="operations__update">
-                                <img src={update_image} alt="Image for updating an IP" class="operations__content-img"/>
+                                <img src={update_image} alt="Updating an IP" class="operations__content-img"/>
                                 <div className="operations__text">
                                     <h2>Update IP</h2>
                                     <p>      
@@ -54,7 +54,7 @@ class HomePage extends Component {
                                 </div>
                             </div>
                             <div className="operations__delete">
-                                <img src={delete_image} alt="Image for deleting an IP" class="operations__content-img"/>
+                                <img src={delete_image} alt="Deleting an IP" class="operations__content-img"/>
                                 <div className="operations__text">
                                     <h2>Delete IP</h2>
                                     <p>      
